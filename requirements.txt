@@ -1,0 +1,10 @@
+# FastAPI dependencies
+fastapi==0.76.0
+uvicorn==0.10.2
+
+# Python dependencies
+python-dotenv==0.13.0
+pydub==2.4.5
+
+# Testing dependencies
+pytest==3.8.3

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FastAPI Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/posts">Posts</a></li>
+                <li><a href="/search">Search</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="latest-posts">
+            <h2>Latest Posts</h2>
+            <ul>
+                {% for post in latest_posts %}
+                    <li>
+                        <a href="{% url 'post_detail' post.id %}">{{ post.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+        <section id="search-results">
+            <h2>Search Results</h2>
+            <ul>
+                {% for result in search_results %}
+                    <li>
+                        <a href="{% url 'post_detail' result.id %}">{{ result.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

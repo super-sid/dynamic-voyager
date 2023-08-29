@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    <form action="/search" method="GET">
+        <label for="query">Search:</label>
+        <input type="text" id="query" name="query"><br><button type="submit">Search</button>
+    </form>
+    <ul></ul>
+    {% if results %}
+        {% for result in results %}
+            <li>
+                <a href="/{{ result.url }}">{{ result.title }}</a>
+            </li>
+        {% endfor %}
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
+</body>
+</html>

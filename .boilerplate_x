@@ -1,0 +1,12 @@
+Sure! Here is the list of essential files for a FastAPI blog project as a `tree -ifF` output:
+- README.md
+- requirements.txt
+- FastAPI.py
+- main.py
+- models.py
+- routes.py
+- templates/base.html
+- templates/index.html
+- templates/post.html
+- templates/search.html
+- utils.py
